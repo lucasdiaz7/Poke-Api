@@ -6,7 +6,7 @@ const pg = require("pg");
 
 const { DB_USER, DB_PASSWORD, DB_HOST, DB_DATABASE, PORT } = process.env;
 const sequelize = new Sequelize(
-  `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:/${PORT}/${DB_DATABASE}`,
+  `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_DATABASE}`,
   {
     logging: false, // set to console.log to see the raw SQL queries
     native: false,
